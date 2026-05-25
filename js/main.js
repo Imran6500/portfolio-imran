@@ -230,9 +230,8 @@
 
     const phrases = [
       'Flutter Developer',
-      'Mobile App Engineer',
-      'Real-time App Specialist',
-      'Cross-Platform Developer',
+      'Mobile App Developer',
+      'Hybrid App Developer',
     ];
 
     let phraseIdx = 0;
