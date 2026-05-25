@@ -975,8 +975,9 @@ strong {
 }
 
 .marquee-row {
-  overflow: hidden;
+  overflow: visible;
   width: 100%;
+  padding-block: 6px;
 }
 
 .marquee-track {
@@ -1774,25 +1775,6 @@ body.loaded .hero .reveal-up {
 
   .about-stats {
     grid-template-columns: repeat(4, 1fr);
-  .nav-container {
-    padding: 0 2px;
-  }
-  .logo-img {
-    height: 28px;
-    max-width: 60px;
-  }
-  .hero-name {
-    font-size: 22px;
-    max-width: 98vw;
-  }
-  .hero-title-wrap {
-    font-size: 11px;
-    max-width: 98vw;
-  }
-  .hero-description {
-    font-size: 12px;
-    max-width: 98vw;
-  }
   }
 
   .hero-content {
@@ -1895,12 +1877,17 @@ body.loaded .hero .reveal-up {
 
   .hero-cta {
     justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
     width: 100%;
+    gap: 12px;
   }
 
   .hero-cta .btn {
-    flex: 1 1 100%;
+    width: 100%;
+    min-width: 0;
     justify-content: center;
+    flex: 1 1 auto;
   }
 
   .code-window {
