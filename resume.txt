@@ -1,0 +1,30 @@
+Imran Hashmi
+Flutter Developer | Mobile App Engineer
+
+Summary
+Flutter developer with 2+ years of experience building scalable, real-time mobile applications across Android and iOS. Skilled in Flutter, Dart, Firebase, WebSockets, REST APIs, and production app deployment.
+
+Experience
+RCVTechnologies | Dec 2025 – Present
+Flutter Developer
+- Built 3 Flutter applications for healthcare and catering use cases.
+- Implemented real-time WebSocket features and Firebase FCM notifications.
+- Collaborated with design, backend, and product teams to deliver business-driven mobile solutions.
+
+Skillancer Private Limited | Jul 2024 – Nov 2025
+Flutter Developer
+- Developed and maintained multiple client mobile apps.
+- Focused on scalability, performance optimization, and clean architecture.
+- Integrated REST APIs and improved app performance and state management.
+
+Skills
+Flutter, Dart, GetX, Provider, BLoC, Firebase, WebSockets, FCM, REST APIs, Google Maps API, Git, UI/UX, Responsive Design, Payment Gateways, Debugging, Clean Architecture, MVVM, MVC
+
+Projects
+- Rush Baskets — quick grocery delivery app with dual customer and delivery agent apps.
+- BidVenchure — event booking platform with real-time bidding.
+- SureRide — medical ride booking app with live driver tracking and Google Maps.
+- Dawat — catering service platform for menu browsing and booking.
+
+Contact
+Email: imran.Hashmi@example.com

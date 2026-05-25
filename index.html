@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Imran Hashmi — Flutter Developer with 2+ years of experience building scalable, real-time mobile applications. Expert in Flutter, Dart, Firebase, and WebSockets.">
+  <meta property="og:title" content="Imran Hashmi — Flutter Developer | Mobile App Engineer">
+  <meta property="og:description" content="Flutter Developer with 2+ years of experience building scalable, real-time mobile applications with 5+ production releases across Play Store and App Store.">
+  <meta property="og:type" content="website">
+  <title>Imran Hashmi — Flutter Developer | Mobile App Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ LOADING SCREEN ============ -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-header">
+      <span class="loader-title">IMRAN Hashmi</span>
+      <div class="loader-game">
+        <div class="loader-game-inner">
+          <div class="loader-game-bars">
+            <div class="loader-bar"></div><div class="loader-bar"></div><div class="loader-bar"></div>
+            <div class="loader-bar"></div><div class="loader-bar"></div><div class="loader-bar"></div>
+            <div class="loader-bar"></div><div class="loader-bar"></div><div class="loader-bar"></div>
+            <div class="loader-bar"></div><div class="loader-bar"></div><div class="loader-bar"></div>
+            <div class="loader-bar"></div><div class="loader-bar"></div><div class="loader-bar"></div>
+            <div class="loader-bar"></div><div class="loader-bar"></div><div class="loader-bar"></div>
+            <div class="loader-bar"></div><div class="loader-bar"></div><div class="loader-bar"></div>
+            <div class="loader-bar"></div><div class="loader-bar"></div><div class="loader-bar"></div>
+            <div class="loader-bar"></div><div class="loader-bar"></div><div class="loader-bar"></div>
+          </div>
+          <div class="loader-ball"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="loading-marquee">
+      <div class="loading-marquee-track">
+        <span>Flutter Developer</span>
+        <span>Mobile App Engineer</span>
+        <span>Flutter Developer</span>
+        <span>Mobile App Engineer</span>
+        <span>Flutter Developer</span>
+        <span>Mobile App Engineer</span>
+        <span>Flutter Developer</span>
+        <span>Mobile App Engineer</span>
+      </div>
+    </div>
+
+    <div class="loading-center">
+      <div class="loading-wrap" id="loading-wrap">
+        <div class="loading-glow" id="loading-glow"></div>
+        <div class="loading-button" id="loading-button">
+          <div class="loading-progress" id="loading-progress">
+            <span class="loading-text">Loading</span>
+            <span class="loading-percent" id="loading-percent">0%</span>
+            <span class="loading-cursor"></span>
+          </div>
+          <div class="loading-welcome" id="loading-welcome">
+            <span>Welcome</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <img src="logo.png" alt="Flutter Dev Logo" class="logo-img">
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </div>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main id="main-content" class="main-content">
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <canvas id="particle-canvas"></canvas>
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-content">
+        <div class="hero-text-col">
+          <p class="hero-greeting reveal-up">Hello, I'm</p>
+          <h1 class="hero-name">
+            <span class="reveal-up" style="animation-delay: 0.1s;">Imran</span>
+            <span class="reveal-up" style="animation-delay: 0.25s;">Hashmi</span>
+          </h1>
+          <div class="hero-title-wrap reveal-up" style="animation-delay: 0.4s;">
+            <span class="hero-title" id="typewriter"></span>
+            <span class="typewriter-cursor">|</span>
+          </div>
+          <p class="hero-description reveal-up" style="animation-delay: 0.5s;">
+            I specialize in building high-performance, real-time cross-platform mobile applications that deliver seamless user experiences.
+          </p>
+          <div class="hero-cta reveal-up" style="animation-delay: 0.6s;">
+            <a href="#projects" class="btn btn-primary">
+              <span>View My Work</span>
+              <i class="ri-arrow-right-line"></i>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <span>Get In Touch</span>
+            </a>
+          </div>
+           <div style="margin-top: 24px;">
+              <a href="Imran_Resume.pdf" class="btn btn-outline" download="Imran_Resume.pdf">
+                <i class="ri-download-line"></i>
+                <span>Download Resume (PDF)</span>
+              </a>
+            </div>
+        </div>
+
+        <div class="hero-visual-col reveal-up" style="animation-delay: 0.4s;">
+          <div class="code-window">
+            <div class="code-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="code-title">portfolio_app.dart</span>
+            </div>
+            <pre class="code-body">
+<code><span class="keyword">class</span> <span class="class">PortfolioApp</span> <span class="keyword">extends</span> <span class="class">StatelessWidget</span> {
+  <span class="keyword">const</span> <span class="class">PortfolioApp</span>({<span class="class">super</span>.key});
+
+  <span class="keyword">@override</span>
+  <span class="class">Widget</span> build(<span class="class">BuildContext</span> context) {
+    <span class="keyword">return</span> <span class="class">MaterialApp</span>(
+      title: <span class="string">'Imran Hashmi'</span>,
+      theme: <span class="class">AppTheme</span>.darkTheme,
+      home: <span class="keyword">const</span> <span class="class">HomeScreen</span>(
+        role: <span class="string">'Flutter Expert'</span>,
+        skills: [<span class="string">'Dart'</span>, <span class="string">'Firebase'</span>, <span class="string">'WebSockets'</span>],
+      ),
+    );
+  }
+}</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator reveal-up" style="animation-delay: 0.7s;">
+        <div class="scroll-mouse">
+          <div class="scroll-dot"></div>
+        </div>
+        <span>Scroll Down</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="section-container">
+        <h2 class="section-label reveal">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p class="about-lead">I craft high-performance mobile experiences that users love.</p>
+            <p>I am a passionate and detail-oriented <strong>Flutter Developer</strong> with over 2 years of professional experience in crafting scalable, real-time, and cross-platform mobile applications. I thrive at the intersection of clean architecture and seamless user experience. Throughout my career, I've successfully developed and launched <strong>8+ production applications</strong> across both the Google Play Store and Apple App Store, ranging from complex healthcare solutions to high-demand delivery and catering platforms.</p>
+            <p style="margin-top: 15px;">My technical expertise spans across state management (GetX, Provider, BLoC), real-time data sync with Firebase and WebSockets, and third-party integrations like Stripe and Google Maps APIs. I take pride in writing clean, maintainable code using MVC and MVVM architectures. Whether it's building a dual-app system for a startup or optimizing widget rendering for maximum performance, I am driven by the goal of delivering robust, business-driven solutions that leave a lasting impact.</p>
+           
+          </div>
+          <div class="about-stats" style="grid-template-columns: 1fr; display: flex; flex-direction: column; gap: 20px;">
+            <div class="stat-card reveal">
+              <span class="stat-number" data-count="2">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Years<br>Experience</span>
+            </div>
+            <div class="stat-card reveal">
+              <span class="stat-number" data-count="8">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Apps<br>Released</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section skills">
+      <div class="skills-glow"></div>
+      <h2 class="section-label reveal">Tech Stack</h2>
+      <div class="marquee-wrapper">
+        <div class="marquee-row">
+          <div class="marquee-track marquee-left">
+            <span class="skill-pill">Flutter</span>
+            <span class="skill-pill">Dart</span>
+            <span class="skill-pill">GetX</span>
+            <span class="skill-pill">Provider</span>
+            <span class="skill-pill">BLoC</span>
+            <span class="skill-pill">Firebase</span>
+            <span class="skill-pill">WebSockets</span>
+            <span class="skill-pill">FCM</span>
+            <span class="skill-pill">Flutter</span>
+            <span class="skill-pill">Dart</span>
+            <span class="skill-pill">GetX</span>
+            <span class="skill-pill">Provider</span>
+            <span class="skill-pill">BLoC</span>
+            <span class="skill-pill">Firebase</span>
+            <span class="skill-pill">WebSockets</span>
+            <span class="skill-pill">FCM</span>
+          </div>
+        </div>
+        <div class="marquee-row">
+          <div class="marquee-track marquee-right">
+            <span class="skill-pill accent">MVVM</span>
+            <span class="skill-pill accent">MVC</span>
+            <span class="skill-pill accent">REST APIs</span>
+            <span class="skill-pill accent">Git</span>
+            <span class="skill-pill accent">UI/UX Design</span>
+            <span class="skill-pill accent">Responsive Design</span>
+            <span class="skill-pill accent">Payment Gateway</span>
+            <span class="skill-pill accent">Debugging</span>
+            <span class="skill-pill accent">MVVM</span>
+            <span class="skill-pill accent">MVC</span>
+            <span class="skill-pill accent">REST APIs</span>
+            <span class="skill-pill accent">Git</span>
+            <span class="skill-pill accent">UI/UX Design</span>
+            <span class="skill-pill accent">Responsive Design</span>
+            <span class="skill-pill accent">Payment Gateway</span>
+            <span class="skill-pill accent">Debugging</span>
+          </div>
+        </div>
+        <div class="marquee-row">
+          <div class="marquee-track marquee-left">
+            <span class="skill-pill">Authentication</span>
+            <span class="skill-pill">Cloud Messaging</span>
+            <span class="skill-pill">Google Maps API</span>
+            <span class="skill-pill">Performance Optimization</span>
+            <span class="skill-pill">Clean Architecture</span>
+            <span class="skill-pill">State Management</span>
+            <span class="skill-pill">Cross-Platform</span>
+            <span class="skill-pill">Real-time Apps</span>
+            <span class="skill-pill">Authentication</span>
+            <span class="skill-pill">Cloud Messaging</span>
+            <span class="skill-pill">Google Maps API</span>
+            <span class="skill-pill">Performance Optimization</span>
+            <span class="skill-pill">Clean Architecture</span>
+            <span class="skill-pill">State Management</span>
+            <span class="skill-pill">Cross-Platform</span>
+            <span class="skill-pill">Real-time Apps</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section experience">
+      <div class="section-container">
+        <h2 class="section-label reveal">Experience</h2>
+        <div class="timeline">
+          <div class="timeline-line"></div>
+
+          <div class="timeline-item reveal-left">
+            <div class="timeline-dot">
+              <div class="timeline-dot-inner"></div>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <div class="timeline-role">
+                  <h3>Flutter Developer</h3>
+                  <span class="timeline-badge">Current</span>
+                </div>
+                <span class="timeline-company"><i class="ri-building-2-line"></i> RCVTechnologies</span>
+                <span class="timeline-meta"><i class="ri-calendar-line"></i> Dec 2025 – Present &nbsp;·&nbsp; Full Time &nbsp;·&nbsp; On-site</span>
+              </div>
+              <ul class="timeline-body">
+                <li>Built 3 Flutter applications (2 healthcare Uber-style apps and 1 catering app) currently in testing, implementing real-time WebSocket features and Firebase FCM-based push notifications.</li>
+                <li>Designed, developed, and maintained high-performance, scalable cross-platform mobile applications using Flutter and Dart.</li>
+                <li>Collaborated with designers, backend engineers, and product managers to deliver business-driven mobile solutions within deadlines.</li>
+                <li>Integrated RESTful APIs, real-time WebSocket features, and Firebase services to enhance functionality and user engagement.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal-right">
+            <div class="timeline-dot">
+              <div class="timeline-dot-inner"></div>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <div class="timeline-role">
+                  <h3>Flutter Developer</h3>
+                </div>
+                <span class="timeline-company"><i class="ri-building-2-line"></i> Skillancer Private Limited</span>
+                <span class="timeline-meta"><i class="ri-calendar-line"></i> Jul 2024 – Nov 2025 &nbsp;·&nbsp; Full Time &nbsp;·&nbsp; Remote</span>
+              </div>
+              <ul class="timeline-body">
+                <li>Developed and maintained multiple client mobile applications, focusing on scalability, performance optimization, and clean architecture.</li>
+                <li>Independently handled end-to-end app development including UI, backend integration, deployment, and post-release updates.</li>
+                <li>Optimized app performance by reducing unnecessary widget rebuilds and improving state management efficiency.</li>
+                <li>Collaborated with backend teams to integrate RESTful APIs, ensuring efficient data handling and seamless user experience.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+      <div class="section-container">
+        <h2 class="section-label reveal">Featured Projects</h2>
+        <div class="projects-grid">
+
+          <article class="project-card reveal" id="project-rush-baskets">
+            <div class="project-card-glow"></div>
+            <div class="project-card-content">
+              <div class="project-number">01</div>
+              <div class="project-header">
+                <h3>Rush Baskets</h3>
+                <span class="project-badge">Lead Developer · 2024</span>
+              </div>
+              <p class="project-subtitle">Quick Grocery Delivery App</p>
+              <p class="project-desc">Developed a dual-application system for customers and delivery agents, enabling seamless order and delivery management. Implemented real-time chat functionality using WebSockets for instant communication between users and admin.</p>
+              <div class="project-highlight">
+                <i class="ri-download-cloud-2-line"></i>
+                <span>5K+ Downloads on Google Play Store</span>
+              </div>
+              <div class="project-tech">
+                <span>Flutter</span><span>Dart</span><span>GetX</span>
+                <span>REST APIs</span><span>WebSockets</span><span>Payment Gateway</span>
+              </div>
+              <div class="project-links" style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="https://play.google.com/store/apps/details?id=com.rushbaskets.rush_baskets" target="_blank" class="btn btn-outline" style="padding: 8px 16px; font-size: 13px; font-weight: 500; border-radius: 8px; border-color: rgba(255,255,255,0.15);">
+                  <i class="ri-google-play-fill" style="margin-right: 4px;"></i> User App
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.rushbaskets.rush_baskets_delivery_agent" target="_blank" class="btn btn-outline" style="padding: 8px 16px; font-size: 13px; font-weight: 500; border-radius: 8px; border-color: rgba(255,255,255,0.15);">
+                  <i class="ri-google-play-fill" style="margin-right: 4px;"></i> Delivery App
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" id="project-bidvenchure">
+            <div class="project-card-glow"></div>
+            <div class="project-card-content">
+              <div class="project-number">02</div>
+              <div class="project-header">
+                <h3>BidVenchure</h3>
+                <span class="project-badge">Lead Developer · 2024</span>
+              </div>
+              <p class="project-subtitle">Event Booking Platform</p>
+              <p class="project-desc">Led development of a full-featured event booking platform connecting users with restaurant venues for customized event planning. Built a real-time bidding system enabling users to negotiate pricing directly with venue owners.</p>
+              <div class="project-highlight">
+                <i class="ri-auction-line"></i>
+                <span>Real-time Bidding System</span>
+              </div>
+              <div class="project-tech">
+                <span>Flutter</span><span>Dart</span><span>BLoC</span>
+                <span>WebSockets</span><span>REST APIs</span>
+              </div>
+              <div class="project-links" style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="https://play.google.com/store/apps/details?id=com.bidvenchure.bid_venchure_user" target="_blank" class="btn btn-outline" style="padding: 8px 16px; font-size: 13px; font-weight: 500; border-radius: 8px; border-color: rgba(255,255,255,0.15);">
+                  <i class="ri-google-play-fill" style="margin-right: 4px;"></i> View App
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" id="project-sureride">
+            <div class="project-card-glow"></div>
+            <div class="project-card-content">
+              <div class="project-number">03</div>
+              <div class="project-header">
+                <h3>SureRide</h3>
+                <span class="project-badge">Developer · 2025</span>
+              </div>
+              <p class="project-subtitle">Medical Ride Booking App</p>
+              <p class="project-desc">Developed a real-time medical ride booking application for hospital visits and emergency transportation. Implemented live driver tracking, ride status updates, and location services using Google Maps integration.</p>
+              <div class="project-highlight">
+                <i class="ri-map-pin-line"></i>
+                <span>Live Driver Tracking &amp; Google Maps</span>
+              </div>
+              <div class="project-tech">
+                <span>Flutter</span><span>Dart</span><span>Provider</span>
+                <span>Firebase</span><span>Google Maps API</span><span>REST APIs</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" id="project-dawat">
+            <div class="project-card-glow"></div>
+            <div class="project-card-content">
+              <div class="project-number">04</div>
+              <div class="project-header">
+                <h3>Dawat</h3>
+                <span class="project-badge">Lead Developer</span>
+              </div>
+              <p class="project-subtitle">Catering Service App</p>
+              <p class="project-desc">A comprehensive catering service platform allowing users to seamlessly book catering for their guests. Restaurants and caterers can list and manage their menus via a dedicated web panel, instantly reflecting in the Flutter app where users can browse various categories and select items for their events.</p>
+              <div class="project-highlight">
+                <i class="ri-restaurant-line"></i>
+                <span>Dynamic Menus & Address Auto-Complete</span>
+              </div>
+              <div class="project-tech">
+                <span>Flutter</span><span>Dart</span><span>GetX</span>
+                <span>REST APIs</span><span>Stripe</span><span>FCM</span><span>Google APIs</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section education">
+      <div class="section-container">
+        <h2 class="section-label reveal">Education &amp; Certifications</h2>
+        <div class="education-grid">
+          <div class="education-card reveal">
+            <div class="edu-icon-wrap">
+              <i class="ri-graduation-cap-fill"></i>
+            </div>
+            <div class="edu-info">
+              <h3>B.Tech in Information Technology</h3>
+              <span class="edu-school">Rajkiya Engineering College, Azamgarh</span>
+              <span class="edu-year">2020 – 2024</span>
+            </div>
+          </div>
+          <div class="cert-card reveal">
+            <div class="edu-icon-wrap cert">
+              <i class="ri-award-fill"></i>
+            </div>
+            <div class="edu-info">
+              <h3>Certifications</h3>
+              <ul class="cert-list">
+                <li><i class="ri-check-line"></i> Advanced Prompt Engineering for Large Language Models</li>
+                <li><i class="ri-check-line"></i> Blockchain Fundamentals and Application</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="contact-glow"></div>
+      <div class="section-container">
+        <h2 class="contact-heading reveal">
+          <span>Let's Work</span>
+          <span>Together<span class="accent-dot">.</span></span>
+        </h2>
+        <p class="contact-sub reveal">Have a project in mind? Let's build something amazing.</p>
+        <div class="contact-wrapper reveal">
+          <div class="contact-grid">
+            <a href="mailto:ih8237728@gmail.com" class="contact-card" id="contact-email">
+              <i class="ri-mail-send-line"></i>
+              <span class="contact-card-label">Email</span>
+              <span class="contact-card-value">ih8237728@gmail.com</span>
+            </a>
+            <a href="tel:+919369066500" class="contact-card" id="contact-phone">
+              <i class="ri-phone-line"></i>
+              <span class="contact-card-label">Phone</span>
+              <span class="contact-card-value">+91 9369066500</span>
+            </a>
+            <a href="https://linkedin.com/in/imran-Hashmi" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-linkedin">
+              <i class="ri-linkedin-box-fill"></i>
+              <span class="contact-card-label">LinkedIn</span>
+              <span class="contact-card-value">imran-Hashmi</span>
+            </a>
+            <a href="https://github.com/Imran6500" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-github">
+              <i class="ri-github-fill"></i>
+              <span class="contact-card-label">GitHub</span>
+              <span class="contact-card-value">Imran6500</span>
+            </a>
+          </div>
+          <div class="contact-form-container">
+            <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+              <div class="form-group">
+                <input type="text" class="form-input" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-input" placeholder="Your Email" required>
+              </div>
+              <div class="form-group">
+                <textarea class="form-input form-textarea" placeholder="Your Message" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary form-submit">
+                <span>Send Message</span>
+                <i class="ri-send-plane-fill"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-glow"></div>
+    <div class="section-container">
+      <div class="footer-top">
+        <h2 class="footer-heading">Ready to scale your app?</h2>
+        <p class="footer-sub">Let's collaborate to build something extraordinary.</p>
+        <a href="#contact" class="btn btn-primary footer-btn">
+          <span>Start a Conversation</span>
+          <i class="ri-arrow-right-line"></i>
+        </a>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo">
+            <img src="logo.png" alt="Flutter Dev Logo" class="logo-img">
+          </a>
+          <p class="footer-copy">&copy; 2025 Imran Hashmi.<br>Built with passion.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+        </div>
+        <div class="footer-links">
+          <h4>Socials</h4>
+          <a href="https://linkedin.com/in/imran-Hashmi" target="_blank" rel="noopener noreferrer"><i class="ri-linkedin-box-fill" style="margin-right: 6px;"></i>LinkedIn</a>
+          <a href="https://github.com/Imran6500" target="_blank" rel="noopener noreferrer"><i class="ri-github-fill" style="margin-right: 6px;"></i>GitHub</a>
+          <a href="mailto:ih8237728@gmail.com"><i class="ri-mail-line" style="margin-right: 6px;"></i>Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
