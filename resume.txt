@@ -2,7 +2,7 @@ Imran Hashmi
 Flutter Developer | Mobile App Developer
 
 Summary
-Flutter developer with 2+ years of experience building scalable, real-time mobile applications across Android and iOS. Skilled in Flutter, Dart, Firebase, WebSockets, REST APIs, and production app deployment.
+Flutter developer with 2.5+ years of experience building scalable, real-time mobile applications across Android and iOS. Skilled in Flutter, Dart, Firebase, WebSockets, REST APIs, and production app deployment.
 
 Experience
 RCVTechnologies | Dec 2025 – Present

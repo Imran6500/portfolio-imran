@@ -1,546 +1,1244 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Imran Hashmi — Flutter Developer with 2+ years of experience building scalable, real-time mobile applications. Expert in Flutter, Dart, Firebase, and WebSockets.">
-  <meta property="og:title" content="Imran Hashmi — Flutter Developer | Mobile App Developer">
-  <meta property="og:description" content="Flutter Developer with 2+ years of experience building scalable, real-time mobile applications with 5+ production releases across Play Store and App Store.">
+  <meta name="description"
+    content="Imran Hashmi — Flutter Developer with 2.5+ years of experience architecting and shipping production mobile applications across EV, Quick-Commerce, Medical Ride-Booking, and E-Commerce.">
+  <meta name="keywords"
+    content="Imran Hashmi, Flutter Developer, Mobile App Developer, Dart, Clean Architecture, BLoC, Socket.IO, Android, iOS">
+  <meta name="author" content="Imran Hashmi">
+  <meta property="og:title" content="Imran Hashmi | Flutter Developer & Mobile App Architect">
+  <meta property="og:description"
+    content="Production-grade Flutter applications on Google Play Store and Apple App Store. 2.5+ Years Experience, 8+ Apps Released, 5K+ Organic Downloads.">
   <meta property="og:type" content="website">
-  <title>Imran Hashmi — Flutter Developer | Mobile App Developer</title>
+  <title>Imran Hashmi | Flutter Developer & Mobile App Architect</title>
+
+  <!-- Modern Clean Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon / Tab Icons -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/jpeg" href="images/imran-hero.jpg">
+  <link rel="apple-touch-icon" href="images/imran-hero.jpg">
+
+  <link rel="stylesheet" href="css/style.css?v=20261004_v7">
 </head>
+
 <body>
 
-  <!-- ============ LOADING SCREEN ============ -->
-  <div id="loading-screen" class="loading-screen">
-    <div class="loading-header">
-      <span class="loader-title">IMRAN Hashmi</span>
-      <div class="loader-game">
-        <div class="loader-game-inner">
-          <div class="loader-game-bars">
-            <div class="loader-bar"></div><div class="loader-bar"></div><div class="loader-bar"></div>
-            <div class="loader-bar"></div><div class="loader-bar"></div><div class="loader-bar"></div>
-            <div class="loader-bar"></div><div class="loader-bar"></div><div class="loader-bar"></div>
-            <div class="loader-bar"></div><div class="loader-bar"></div><div class="loader-bar"></div>
-            <div class="loader-bar"></div><div class="loader-bar"></div><div class="loader-bar"></div>
-            <div class="loader-bar"></div><div class="loader-bar"></div><div class="loader-bar"></div>
-            <div class="loader-bar"></div><div class="loader-bar"></div><div class="loader-bar"></div>
-            <div class="loader-bar"></div><div class="loader-bar"></div><div class="loader-bar"></div>
-            <div class="loader-bar"></div><div class="loader-bar"></div><div class="loader-bar"></div>
-          </div>
-          <div class="loader-ball"></div>
+  <!-- ============ SITE PRELOADER ============ -->
+  <div id="site-preloader" class="site-preloader">
+    <div class="preloader-content">
+      <div class="preloader-branding">
+        <div class="preloader-avatar-ring">
+          <img src="images/imran-hero.jpg" alt="Imran Hashmi" class="preloader-avatar">
+          <div class="preloader-spinner-circle"></div>
+        </div>
+        <div class="preloader-title">
+          <span class="preloader-name">Imran Hashmi</span>
+          <span class="preloader-tagline">&lt;Flutter Architect /&gt;</span>
         </div>
       </div>
-    </div>
-
-    <div class="loading-marquee">
-      <div class="loading-marquee-track">
-        <span>Flutter Developer</span>
-        <span>Mobile App Developer</span>
-        <span>Flutter Developer</span>
-        <span>Mobile App Developer</span>
-        <span>Flutter Developer</span>
-        <span>Mobile App Developer</span>
-        <span>Flutter Developer</span>
-        <span>Mobile App Developer</span>
-      </div>
-    </div>
-
-    <div class="loading-center">
-      <div class="loading-wrap" id="loading-wrap">
-        <div class="loading-glow" id="loading-glow"></div>
-        <div class="loading-button" id="loading-button">
-          <div class="loading-progress" id="loading-progress">
-            <span class="loading-text">Loading</span>
-            <span class="loading-percent" id="loading-percent">0%</span>
-            <span class="loading-cursor"></span>
-          </div>
-          <div class="loading-welcome" id="loading-welcome">
-            <span>Welcome</span>
-          </div>
+      <div class="preloader-bar-wrap">
+        <div class="preloader-bar-track">
+          <div class="preloader-bar-fill" id="preloader-bar-fill"></div>
+        </div>
+        <div class="preloader-meta">
+          <span class="preloader-status" id="preloader-status">Initializing Architecture...</span>
+          <span class="preloader-percent" id="preloader-percent">0%</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ============ NAVBAR ============ -->
-  <nav id="navbar" class="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">
-        <img src="logo.png" alt="Flutter Dev Logo" class="logo-img">
+  <!-- ============ HEADER / NAVIGATION ============ -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo">
+        <img src="images/avatar.jpg" alt="Imran Hashmi" class="brand-avatar">
+        <div class="brand-text">
+          <span class="brand-name">Imran Hashmi</span>
+          <span class="brand-role">Flutter Developer</span>
+        </div>
       </a>
-      <div class="nav-links" id="nav-links">
-        <a href="#hero" class="nav-link active" data-section="hero">Home</a>
-        <a href="#about" class="nav-link" data-section="about">About</a>
-        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
-        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
-        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
-        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-item active" data-section="hero">Home</a></li>
+          <li><a href="#about" class="nav-item" data-section="about">About</a></li>
+          <li><a href="#skills" class="nav-item" data-section="skills">Skills</a></li>
+          <li><a href="#experience" class="nav-item" data-section="experience">Experience</a></li>
+          <li><a href="#projects" class="nav-item" data-section="projects">Live Apps</a></li>
+          <li><a href="#education" class="nav-item" data-section="education">Education</a></li>
+          <li><a href="#contact" class="nav-item" data-section="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="Imran_Hashmi_Resume.pdf" class="btn btn-outline-sm" download="Imran_Hashmi_Resume.pdf" target="_blank">
+          <i class="ri-file-download-line"></i>
+          <span>Resume</span>
+        </a>
+        <a href="#contact" class="btn btn-primary-sm">
+          <span>Hire Me</span>
+        </a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
       </div>
-      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
-  </nav>
+  </header>
 
   <!-- ============ MAIN CONTENT ============ -->
-  <main id="main-content" class="main-content">
+  <main id="main-content">
 
-    <!-- HERO -->
-    <section id="hero" class="hero">
-      <canvas id="particle-canvas"></canvas>
-      <div class="hero-orb hero-orb-1"></div>
-      <div class="hero-orb hero-orb-2"></div>
-      <div class="hero-content">
-        <div class="hero-text-col">
-          <p class="hero-greeting reveal-up">Hello, I'm</p>
-          <h1 class="hero-name">
-            <span class="reveal-up" style="animation-delay: 0.1s;">Imran</span>
-            <span class="reveal-up" style="animation-delay: 0.25s;">Hashmi</span>
-          </h1>
-          <div class="hero-title-wrap reveal-up" style="animation-delay: 0.4s;">
-            <span class="hero-title" id="typewriter"></span>
-            <span class="typewriter-cursor">|</span>
-          </div>
-          <p class="hero-description reveal-up" style="animation-delay: 0.5s;">
-            I specialize in building high-performance, real-time cross-platform mobile applications that deliver seamless user experiences.
-          </p>
-          <div class="hero-cta reveal-up" style="animation-delay: 0.6s;">
-            <a href="#projects" class="btn btn-primary">
-              <span>View My Work</span>
-              <i class="ri-arrow-right-line"></i>
-            </a>
-            <a href="#contact" class="btn btn-outline">
-              <span>Get In Touch</span>
-            </a>
-          </div>
-           <div style="margin-top: 24px;">
-              <a href="imran_resume.pdf" class="btn btn-outline" download="Imran_Resume.pdf">
-                <i class="ri-download-line"></i>
-                <span>Download Resume (PDF)</span>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="section-container">
+        <div class="hero-grid">
+
+          <div class="hero-content">
+            <div class="badge-status">
+              <span class="status-indicator"></span>
+              <span>Available for Full-time Roles &amp; Part time</span>
+            </div>
+
+            <h1 class="hero-headline">
+              Architecting <span class="text-gradient">Production-Grade</span> Mobile Experiences
+            </h1>
+
+            <p class="hero-bio">
+              Hi, I'm <strong>Imran Hashmi</strong>, a <strong>Flutter Developer</strong> with <strong>2.5+ years of
+                experience</strong> building and deploying scalable, real-time mobile applications across <strong>EV
+                Charging, Quick-Commerce, Medical Ride-Booking, and E-Commerce</strong>. 8+ apps shipped to
+              <strong>Google Play Store</strong> and <strong>Apple App Store</strong> with <strong>5K+ organic
+                downloads</strong>.
+            </p>
+
+            <div class="hero-meta-row">
+              <div class="meta-item"><i class="ri-map-pin-2-fill"></i> Noida, India</div>
+              <div class="meta-item"><i class="ri-mail-fill"></i> imranhashimi6500@gmail.com</div>
+              <div class="meta-item"><i class="ri-phone-fill"></i> +91 9369066500</div>
+            </div>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                <span>View Live Apps</span>
+                <i class="ri-arrow-down-line"></i>
+              </a>
+              <a href="Imran_Hashmi_Resume.pdf" class="btn btn-outline" download="Imran_Hashmi_Resume.pdf" target="_blank">
+                <i class="ri-download-2-line"></i>
+                <span>Download Resume</span>
+              </a>
+              <a href="#contact" class="btn btn-ghost">
+                <span>Contact Me</span>
               </a>
             </div>
-        </div>
-
-        <div class="hero-visual-col reveal-up" style="animation-delay: 0.4s;">
-          <div class="code-window">
-            <div class="code-header">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-              <span class="code-title">portfolio_app.dart</span>
-            </div>
-            <pre class="code-body">
-<code><span class="keyword">class</span> <span class="class">PortfolioApp</span> <span class="keyword">extends</span> <span class="class">StatelessWidget</span> {
-  <span class="keyword">const</span> <span class="class">PortfolioApp</span>({<span class="class">super</span>.key});
-
-  <span class="keyword">@override</span>
-  <span class="class">Widget</span> build(<span class="class">BuildContext</span> context) {
-    <span class="keyword">return</span> <span class="class">MaterialApp</span>(
-      title: <span class="string">'Imran Hashmi'</span>,
-      theme: <span class="class">AppTheme</span>.darkTheme,
-      home: <span class="keyword">const</span> <span class="class">HomeScreen</span>(
-        role: <span class="string">'Flutter Expert'</span>,
-        skills: [<span class="string">'Dart'</span>, <span class="string">'Firebase'</span>, <span class="string">'WebSockets'</span>],
-      ),
-    );
-  }
-}</code>
-            </pre>
           </div>
+
+          <div class="hero-avatar-col">
+            <div class="avatar-showcase">
+              <!-- Ambient background glowing orbs -->
+              <div class="avatar-glow-orb glow-cyan"></div>
+              <div class="avatar-glow-orb glow-indigo"></div>
+
+              <!-- Main Avatar Card Frame -->
+              <div class="avatar-card-frame">
+                <div class="avatar-image-wrapper">
+                  <img src="images/imran-hero.jpg?v=20261004_v8" alt="Imran Hashmi — Flutter Developer" class="hero-avatar-img">
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
-      </div>
-      <div class="scroll-indicator reveal-up" style="animation-delay: 0.7s;">
-        <div class="scroll-mouse">
-          <div class="scroll-dot"></div>
-        </div>
-        <span>Scroll Down</span>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section about">
+    <!-- KEY STATS STRIP -->
+    <section class="stats-strip">
       <div class="section-container">
-        <h2 class="section-label reveal">About Me</h2>
+        <div class="stats-grid">
+          <div class="stat-box">
+            <div class="stat-number">2.5+</div>
+            <div class="stat-label">Years Experience</div>
+            <div class="stat-desc">Mobile Architecture &amp; Delivery</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">8+</div>
+            <div class="stat-label">Production Apps</div>
+            <div class="stat-desc">On Play Store &amp; TestFlight</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">5K+</div>
+            <div class="stat-label">Organic Downloads</div>
+            <div class="stat-desc">Verified Customer Installs</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">95%+</div>
+            <div class="stat-label">FCM Delivery Rate</div>
+            <div class="stat-desc">Real-time Push Notifications</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-badge">Professional Background</div>
+          <h2 class="section-title">Engineering Reliable Mobile Systems</h2>
+          <p class="section-lead">A summary of my engineering background, core philosophies, and production
+            capabilities.</p>
+        </div>
+
         <div class="about-grid">
-          <div class="about-text reveal">
-            <p class="about-lead">I craft high-performance mobile experiences that users love.</p>
-            <p>I am a passionate and detail-oriented <strong>Flutter Developer</strong> with over 2 years of professional experience in crafting scalable, real-time, and cross-platform mobile applications. I thrive at the intersection of clean architecture and seamless user experience. Throughout my career, I've successfully developed and launched <strong>8+ production applications</strong> across both the Google Play Store and Apple App Store, ranging from complex healthcare solutions to high-demand delivery and catering platforms.</p>
-            <p style="margin-top: 15px;">My technical expertise spans across state management (GetX, Provider, BLoC), real-time data sync with Firebase and WebSockets, and third-party integrations like Stripe and Google Maps APIs. I take pride in writing clean, maintainable code using MVC and MVVM architectures. Whether it's building a dual-app system for a startup or optimizing widget rendering for maximum performance, I am driven by the goal of delivering robust, business-driven solutions that leave a lasting impact.</p>
-           
+          <div class="about-card">
+            <h3>Executive Summary</h3>
+            <p>
+              I am a <strong>Flutter Developer</strong> with over 2.5 years of hands-on professional experience
+              architecting and shipping production mobile applications across <strong>EV, Medical Ride-Booking,
+                E-commerce, and Ride-Booking</strong> domains.
+            </p>
+            <p>
+              Skilled in <strong>Clean Architecture, BLoC, Provider, GetX, Socket.IO, and FCM</strong> with deep
+              expertise in real-time features, payment integrations (Razorpay, Cashfree), API performance optimization
+              using Dio interceptors, and production app delivery.
+            </p>
+            <p>
+              From system architecture and UI implementation to store compliance and CI/CD pipelines, I bridge business
+              objectives with robust, maintainable engineering.
+            </p>
           </div>
-          <div class="about-stats" style="grid-template-columns: 1fr; display: flex; flex-direction: column; gap: 20px;">
-            <div class="stat-card reveal">
-              <span class="stat-number" data-count="2">0</span><span class="stat-plus">+</span>
-              <span class="stat-label">Years<br>Experience</span>
+
+          <div class="about-pillars-grid">
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="ri-layout-masonry-line"></i></div>
+              <h4>Clean Architecture</h4>
+              <p>Modular code structure with decoupled domain, data, and presentation layers for long-term scalability.
+              </p>
             </div>
-            <div class="stat-card reveal">
-              <span class="stat-number" data-count="8">0</span><span class="stat-plus">+</span>
-              <span class="stat-label">Apps<br>Released</span>
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="ri-broadcast-line"></i></div>
+              <h4>Real-Time &amp; Telemetry</h4>
+              <p>Sub-second Socket.IO live data streaming, dynamic driver tracking, and high-priority FCM notifications.
+              </p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="ri-bank-card-line"></i></div>
+              <h4>Payment Gateways</h4>
+              <p>End-to-end checkout with Cashfree and Razorpay, automated webhook verification, and UPI auto-intent.
+              </p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="ri-rocket-line"></i></div>
+              <h4>Store Deployments</h4>
+              <p>End-to-end store release cycles, TestFlight iOS testing, Google Play Console compliance, and CI/CD
+                automation.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section skills">
-      <div class="skills-glow"></div>
-      <h2 class="section-label reveal">Tech Stack</h2>
-      <div class="marquee-wrapper">
-        <div class="marquee-row">
-          <div class="marquee-track marquee-left">
-            <span class="skill-pill">Flutter</span>
-            <span class="skill-pill">Dart</span>
-            <span class="skill-pill">GetX</span>
-            <span class="skill-pill">Provider</span>
-            <span class="skill-pill">BLoC</span>
-            <span class="skill-pill">Firebase</span>
-            <span class="skill-pill">WebSockets</span>
-            <span class="skill-pill">FCM</span>
-            <span class="skill-pill">Flutter</span>
-            <span class="skill-pill">Dart</span>
-            <span class="skill-pill">GetX</span>
-            <span class="skill-pill">Provider</span>
-            <span class="skill-pill">BLoC</span>
-            <span class="skill-pill">Firebase</span>
-            <span class="skill-pill">WebSockets</span>
-            <span class="skill-pill">FCM</span>
-          </div>
-        </div>
-        <div class="marquee-row">
-          <div class="marquee-track marquee-right">
-            <span class="skill-pill accent">MVVM</span>
-            <span class="skill-pill accent">MVC</span>
-            <span class="skill-pill accent">REST APIs</span>
-            <span class="skill-pill accent">Git</span>
-            <span class="skill-pill accent">UI/UX Design</span>
-            <span class="skill-pill accent">Responsive Design</span>
-            <span class="skill-pill accent">Payment Gateway</span>
-            <span class="skill-pill accent">Debugging</span>
-            <span class="skill-pill accent">MVVM</span>
-            <span class="skill-pill accent">MVC</span>
-            <span class="skill-pill accent">REST APIs</span>
-            <span class="skill-pill accent">Git</span>
-            <span class="skill-pill accent">UI/UX Design</span>
-            <span class="skill-pill accent">Responsive Design</span>
-            <span class="skill-pill accent">Payment Gateway</span>
-            <span class="skill-pill accent">Debugging</span>
-          </div>
-        </div>
-        <div class="marquee-row">
-          <div class="marquee-track marquee-left">
-            <span class="skill-pill">Authentication</span>
-            <span class="skill-pill">Cloud Messaging</span>
-            <span class="skill-pill">Google Maps API</span>
-            <span class="skill-pill">Performance Optimization</span>
-            <span class="skill-pill">Clean Architecture</span>
-            <span class="skill-pill">State Management</span>
-            <span class="skill-pill">Cross-Platform</span>
-            <span class="skill-pill">Real-time Apps</span>
-            <span class="skill-pill">Authentication</span>
-            <span class="skill-pill">Cloud Messaging</span>
-            <span class="skill-pill">Google Maps API</span>
-            <span class="skill-pill">Performance Optimization</span>
-            <span class="skill-pill">Clean Architecture</span>
-            <span class="skill-pill">State Management</span>
-            <span class="skill-pill">Cross-Platform</span>
-            <span class="skill-pill">Real-time Apps</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section experience">
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section bg-alt">
       <div class="section-container">
-        <h2 class="section-label reveal">Experience</h2>
-        <div class="timeline">
-          <div class="timeline-line"></div>
+        <div class="section-header text-center">
+          <div class="section-badge">Technical Arsenal</div>
+          <h2 class="section-title">Skills &amp; Technology Stack</h2>
+          <p class="section-lead">Technologies and tools applied daily across production codebases.</p>
+        </div>
 
-          <div class="timeline-item reveal-left">
-            <div class="timeline-dot">
-              <div class="timeline-dot-inner"></div>
+        <div class="skills-grid">
+
+          <div class="skill-group-card">
+            <div class="group-header">
+              <i class="ri-flutter-fill"></i>
+              <h3>Core Frameworks</h3>
             </div>
-            <div class="timeline-card">
-              <div class="timeline-card-header">
-                <div class="timeline-role">
-                  <h3>Flutter Developer</h3>
-                  <span class="timeline-badge">Current</span>
+            <ul class="skill-pill-list">
+              <li>Flutter 3.x</li>
+              <li>Dart 3</li>
+              <li>Sound Null Safety</li>
+              <li>Material 3</li>
+              <li>BLoC / Cubit</li>
+              <li>Provider</li>
+              <li>GetX</li>
+            </ul>
+          </div>
+
+          <div class="skill-group-card">
+            <div class="group-header">
+              <i class="ri-git-merge-line"></i>
+              <h3>Architecture &amp; Patterns</h3>
+            </div>
+            <ul class="skill-pill-list">
+              <li>Clean Architecture</li>
+              <li>MVVM Pattern</li>
+              <li>Repository Pattern</li>
+              <li>go_router</li>
+              <li>Dependency Injection</li>
+              <li>Modular Scalability</li>
+            </ul>
+          </div>
+
+          <div class="skill-group-card">
+            <div class="group-header">
+              <i class="ri-wireless-charging-line"></i>
+              <h3>Real-Time &amp; Cloud</h3>
+            </div>
+            <ul class="skill-pill-list">
+              <li>Socket.IO</li>
+              <li>Firebase FCM</li>
+              <li>WebSockets</li>
+              <li>Live Data Streaming</li>
+              <li>Real-Time Chat</li>
+              <li>Background Services</li>
+            </ul>
+          </div>
+
+          <div class="skill-group-card">
+            <div class="group-header">
+              <i class="ri-tools-line"></i>
+              <h3>APIs, Storage &amp; Tools</h3>
+            </div>
+            <ul class="skill-pill-list">
+              <li>Google Maps SDK</li>
+              <li>Razorpay</li>
+              <li>Cashfree</li>
+              <li>Dio &amp; Interceptors</li>
+              <li>Hive / SharedPreferences</li>
+              <li>Git &amp; GitHub</li>
+            </ul>
+          </div>
+
+          <div class="skill-group-card">
+            <div class="group-header">
+              <i class="ri-checkbox-circle-line"></i>
+              <h3>Testing &amp; Deployment</h3>
+            </div>
+            <ul class="skill-pill-list">
+              <li>Unit Testing</li>
+              <li>Widget Testing</li>
+              <li>Integration Testing</li>
+              <li>Google Play Console</li>
+              <li>Apple TestFlight</li>
+              <li>CI/CD Workflows</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="section">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-badge">Employment History</div>
+          <h2 class="section-title">Work Experience</h2>
+          <p class="section-lead">Full-time engineering roles delivering production mobile platforms.</p>
+        </div>
+
+        <div class="timeline-container">
+
+          <!-- RCV Technologies -->
+          <div class="timeline-entry">
+            <div class="timeline-indicator">
+              <div class="indicator-dot"></div>
+            </div>
+            <div class="timeline-content-card">
+              <div class="entry-header">
+                <div>
+                  <h3 class="entry-role">Flutter Developer</h3>
+                  <div class="entry-company"><i class="ri-building-2-line"></i> RCV Technologies</div>
                 </div>
-                <span class="timeline-company"><i class="ri-building-2-line"></i> RCVTechnologies</span>
-                <span class="timeline-meta"><i class="ri-calendar-line"></i> Dec 2025 – Present &nbsp;·&nbsp; Full Time &nbsp;·&nbsp; On-site</span>
-              </div>
-              <ul class="timeline-body">
-                <li>Built 3 Flutter applications (2 healthcare Uber-style apps and 1 catering app) currently in testing, implementing real-time WebSocket features and Firebase FCM-based push notifications.</li>
-                <li>Designed, developed, and maintained high-performance, scalable cross-platform mobile applications using Flutter and Dart.</li>
-                <li>Collaborated with designers, backend Developers, and product managers to deliver business-driven mobile solutions within deadlines.</li>
-                <li>Integrated RESTful APIs, real-time WebSocket features, and Firebase services to enhance functionality and user engagement.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal-right">
-            <div class="timeline-dot">
-              <div class="timeline-dot-inner"></div>
-            </div>
-            <div class="timeline-card">
-              <div class="timeline-card-header">
-                <div class="timeline-role">
-                  <h3>Flutter Developer</h3>
+                <div class="entry-meta">
+                  <span class="badge-current">Present</span>
+                  <span class="entry-date">Dec 2025 – Present</span>
+                  <span class="entry-location">Noida, India · Full Time · On-site</span>
                 </div>
-                <span class="timeline-company"><i class="ri-building-2-line"></i> Skillancer Private Limited</span>
-                <span class="timeline-meta"><i class="ri-calendar-line"></i> Jul 2024 – Nov 2025 &nbsp;·&nbsp; Full Time &nbsp;·&nbsp; Remote</span>
               </div>
-              <ul class="timeline-body">
-                <li>Developed and maintained multiple client mobile applications, focusing on scalability, performance optimization, and clean architecture.</li>
-                <li>Independently handled end-to-end app development including UI, backend integration, deployment, and post-release updates.</li>
-                <li>Optimized app performance by reducing unnecessary widget rebuilds and improving state management efficiency.</li>
-                <li>Collaborated with backend teams to integrate RESTful APIs, ensuring efficient data handling and seamless user experience.</li>
+              <ul class="entry-bullets">
+                <li>Architected and shipped 4 production-grade Flutter apps across Medical Ride-Booking, Catering, and
+                  EV Charging domains, deployed via TestFlight for iOS and internal testing tracks.</li>
+                <li>Currently building a production-grade EV Charging platform with OCPP-backed REST APIs for remote
+                  Start/Stop control, real-time charging and energy monitoring via Socket.IO, and Razorpay payments.
+                </li>
+                <li>Integrated Socket.IO for real-time data streaming and live chat, and Firebase FCM for push
+                  notifications with 95%+ delivery rate across Android and iOS.</li>
+                <li>Reduced release cycle time by 30% through streamlined CI/CD workflows, leading end-to-end delivery
+                  from wireframes to store deployment.</li>
               </ul>
+              <div class="entry-tags">
+                <span>Flutter 3.x</span><span>Dart</span><span>Provider</span><span>Socket.IO</span><span>OCPP
+                  APIs</span><span>Razorpay</span><span>Google Maps</span><span>FCM</span>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section projects">
-      <div class="section-container">
-        <h2 class="section-label reveal">Featured Projects</h2>
-        <div class="projects-grid">
-
-          <article class="project-card reveal" id="project-rush-baskets">
-            <div class="project-card-glow"></div>
-            <div class="project-card-content">
-              <div class="project-number">01</div>
-              <div class="project-header">
-                <h3>Rush Baskets</h3>
-                <span class="project-badge">Lead Developer · 2024</span>
+          <!-- Skillancer Private Limited -->
+          <div class="timeline-entry">
+            <div class="timeline-indicator">
+              <div class="indicator-dot"></div>
+            </div>
+            <div class="timeline-content-card">
+              <div class="entry-header">
+                <div>
+                  <h3 class="entry-role">Flutter Developer</h3>
+                  <div class="entry-company"><i class="ri-building-line"></i> Skillancer Private Limited</div>
+                </div>
+                <div class="entry-meta">
+                  <span class="badge-past">2 Years</span>
+                  <span class="entry-date">Dec 2023 – Nov 2025</span>
+                  <span class="entry-location">Remote · Full Time</span>
+                </div>
               </div>
-              <p class="project-subtitle">Quick Grocery Delivery App</p>
-              <p class="project-desc">Developed a dual-application system for customers and delivery agents, enabling seamless order and delivery management. Implemented real-time chat functionality using WebSockets for instant communication between users and admin.</p>
-              <div class="project-highlight">
-                <i class="ri-download-cloud-2-line"></i>
-                <span>5K+ Downloads on Google Play Store</span>
-              </div>
-              <div class="project-tech">
-                <span>Flutter</span><span>Dart</span><span>GetX</span>
-                <span>REST APIs</span><span>WebSockets</span><span>Payment Gateway</span>
-              </div>
-              <div class="project-links" style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
-                <a href="https://play.google.com/store/apps/details?id=com.rushbaskets.rush_baskets" target="_blank" class="btn btn-outline" style="padding: 8px 16px; font-size: 13px; font-weight: 500; border-radius: 8px; border-color: rgba(255,255,255,0.15);">
-                  <i class="ri-google-play-fill" style="margin-right: 4px;"></i> User App
-                </a>
-                <a href="https://play.google.com/store/apps/details?id=com.rushbaskets.rush_baskets_delivery_agent" target="_blank" class="btn btn-outline" style="padding: 8px 16px; font-size: 13px; font-weight: 500; border-radius: 8px; border-color: rgba(255,255,255,0.15);">
-                  <i class="ri-google-play-fill" style="margin-right: 4px;"></i> Delivery App
-                </a>
+              <ul class="entry-bullets">
+                <li>Delivered and maintained 5+ client-facing Flutter apps across Grocery, Ride-Booking, and Event
+                  Booking domains, all deployed to Google Play Store.</li>
+                <li>Applied Clean Architecture, MVVM, Repository Pattern, and Provider to organize code and support
+                  scalable feature additions across projects.</li>
+                <li>Optimized 100+ RESTful API integrations using Dio interceptors, retry logic, and response caching
+                  for reliable error handling.</li>
+                <li>Managed full app lifecycle from UI implementation to Play Store deployment, including versioning,
+                  releases, and post-release maintenance.</li>
+              </ul>
+              <div class="entry-tags">
+                <span>Clean Architecture</span><span>MVVM</span><span>GetX</span><span>Provider</span><span>Dio
+                  Interceptors</span><span>Play Console</span><span>Cashfree</span>
               </div>
             </div>
-          </article>
-
-          <article class="project-card reveal" id="project-bidvenchure">
-            <div class="project-card-glow"></div>
-            <div class="project-card-content">
-              <div class="project-number">02</div>
-              <div class="project-header">
-                <h3>BidVenchure</h3>
-                <span class="project-badge">Lead Developer · 2024</span>
-              </div>
-              <p class="project-subtitle">Event Booking Platform</p>
-              <p class="project-desc">Led development of a full-featured event booking platform connecting users with restaurant venues for customized event planning. Built a real-time bidding system enabling users to negotiate pricing directly with venue owners.</p>
-              <div class="project-highlight">
-                <i class="ri-auction-line"></i>
-                <span>Real-time Bidding System</span>
-              </div>
-              <div class="project-tech">
-                <span>Flutter</span><span>Dart</span><span>BLoC</span>
-                <span>WebSockets</span><span>REST APIs</span>
-              </div>
-              <div class="project-links" style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
-                <a href="https://play.google.com/store/apps/details?id=com.bidvenchure.bid_venchure_user" target="_blank" class="btn btn-outline" style="padding: 8px 16px; font-size: 13px; font-weight: 500; border-radius: 8px; border-color: rgba(255,255,255,0.15);">
-                  <i class="ri-google-play-fill" style="margin-right: 4px;"></i> View App
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal" id="project-sureride">
-            <div class="project-card-glow"></div>
-            <div class="project-card-content">
-              <div class="project-number">03</div>
-              <div class="project-header">
-                <h3>SureRide</h3>
-                <span class="project-badge">Developer · 2025</span>
-              </div>
-              <p class="project-subtitle">Medical Ride Booking App</p>
-              <p class="project-desc">Developed a real-time medical ride booking application for hospital visits and emergency transportation. Implemented live driver tracking, ride status updates, and location services using Google Maps integration.</p>
-              <div class="project-highlight">
-                <i class="ri-map-pin-line"></i>
-                <span>Live Driver Tracking &amp; Google Maps</span>
-              </div>
-              <div class="project-tech">
-                <span>Flutter</span><span>Dart</span><span>Provider</span>
-                <span>Firebase</span><span>Google Maps API</span><span>REST APIs</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal" id="project-dawat">
-            <div class="project-card-glow"></div>
-            <div class="project-card-content">
-              <div class="project-number">04</div>
-              <div class="project-header">
-                <h3>Dawat</h3>
-                <span class="project-badge">Lead Developer</span>
-              </div>
-              <p class="project-subtitle">Catering Service App</p>
-              <p class="project-desc">A comprehensive catering service platform allowing users to seamlessly book catering for their guests. Restaurants and caterers can list and manage their menus via a dedicated web panel, instantly reflecting in the Flutter app where users can browse various categories and select items for their events.</p>
-              <div class="project-highlight">
-                <i class="ri-restaurant-line"></i>
-                <span>Dynamic Menus & Address Auto-Complete</span>
-              </div>
-              <div class="project-tech">
-                <span>Flutter</span><span>Dart</span><span>GetX</span>
-                <span>REST APIs</span><span>Stripe</span><span>FCM</span><span>Google APIs</span>
-              </div>
-            </div>
-          </article>
+          </div>
 
         </div>
       </div>
     </section>
 
-    <!-- EDUCATION -->
-    <section id="education" class="section education">
+    <!-- LIVE APPS & PROJECTS SECTION -->
+    <section id="projects" class="section bg-alt">
       <div class="section-container">
-        <h2 class="section-label reveal">Education &amp; Certifications</h2>
+        <div class="section-header">
+          <div class="section-badge">Live In Production</div>
+          <h2 class="section-title">Featured Mobile Applications</h2>
+          <p class="section-lead">Applications live on the Google Play Store and Apple App Store. Click any screenshot
+            for a full-size preview.</p>
+        </div>
+
+        <div class="projects-container">
+
+          <!-- 1. Rush Baskets -->
+          <article class="project-showcase-card">
+            <div class="project-content-col">
+              <div class="app-identity-row">
+                <img src="images/apps/rush_baskets_user_icon.png" alt="Rush Baskets Icon" class="app-square-icon">
+                <div>
+                  <div class="app-title-wrap">
+                    <h3 class="app-title">Rush Baskets</h3>
+                    <span class="badge-store-tag play"><i class="ri-google-play-fill"></i> Google Play</span>
+                    <span class="badge-store-tag apple"><i class="ri-apple-fill"></i> App Store</span>
+                  </div>
+                  <p class="app-tagline">10-Minute Quick Grocery Delivery (Dual App Ecosystem)</p>
+                </div>
+              </div>
+
+              <div class="app-metrics-strip">
+                <div class="metric-chip"><i class="ri-download-cloud-fill"></i> <strong>5K+</strong> Organic Downloads
+                </div>
+                <div class="metric-chip"><i class="ri-flashlight-fill"></i> <strong>10-Min</strong> Delivery SLA</div>
+                <div class="metric-chip"><i class="ri-dual-sim-2-fill"></i> <strong>Customer + Driver</strong> Apps
+                </div>
+              </div>
+
+              <p class="project-summary">
+                Architected dual Flutter apps (Customer Ordering App + Delivery Agent App) enabling lightning-fast
+                grocery delivery. Integrated <strong>Cashfree Payment Gateway</strong> with end-to-end checkout,
+                <strong>Socket.IO-powered real-time chat</strong> between customers and support, and dynamic driver
+                route navigation using Google Maps SDK.
+              </p>
+
+              <ul class="feature-checklist">
+                <li><i class="ri-check-line"></i> Dual Flutter apps synced in real-time for order dispatch and live
+                  delivery tracking.</li>
+                <li><i class="ri-check-line"></i> Cashfree payment gateway integration with instant refunds and UPI
+                  auto-intent.</li>
+                <li><i class="ri-check-line"></i> Socket.IO live order statuses, socket-driven chat, and push
+                  notifications.</li>
+              </ul>
+
+              <div class="tech-chip-list">
+                <span>Flutter</span><span>Dart</span><span>GetX</span><span>REST
+                  APIs</span><span>Socket.IO</span><span>Cashfree</span><span>Google Maps</span>
+              </div>
+
+              <div class="app-cta-group">
+                <a href="https://play.google.com/store/apps/details?id=com.rushbaskets.rush_baskets" target="_blank"
+                  rel="noopener noreferrer" class="btn-store-action play">
+                  <i class="ri-google-play-fill"></i>
+                  <div>
+                    <span class="cta-top">GET IT ON</span>
+                    <span class="cta-bottom">Play Store (User App)</span>
+                  </div>
+                </a>
+                <a href="https://apps.apple.com/in/app/rush-baskets/id6749930237" target="_blank"
+                  rel="noopener noreferrer" class="btn-store-action apple">
+                  <i class="ri-apple-fill"></i>
+                  <div>
+                    <span class="cta-top">DOWNLOAD ON</span>
+                    <span class="cta-bottom">App Store (iOS)</span>
+                  </div>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.rushbaskets.rush_baskets_delivery_agent"
+                  target="_blank" rel="noopener noreferrer" class="btn-store-action secondary">
+                  <i class="ri-e-bike-2-fill"></i>
+                  <div>
+                    <span class="cta-top">AGENT APP</span>
+                    <span class="cta-bottom">Play Store (Driver)</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-device-col">
+              <div class="showcase-slider-container" data-project="rush-baskets">
+                <div class="slider-control-header">
+                  <div class="slider-counter">
+                    <i class="ri-smartphone-line"></i>
+                    <span>Screens (<strong class="slider-current-num">1</strong> of 8)</span>
+                  </div>
+                  <button type="button" class="btn-view-all-screens" data-gallery-target="rush-baskets">
+                    <i class="ri-grid-fill"></i>
+                    <span>View All (8)</span>
+                  </button>
+                </div>
+
+                <div class="slider-viewport-wrap">
+                  <button type="button" class="slider-nav-btn prev" aria-label="Previous screenshot">
+                    <i class="ri-arrow-left-s-line"></i>
+                  </button>
+
+                  <div class="device-showcase-wrap smooth-slider">
+                    <!-- 1. Customer Storefront -->
+                    <div class="phone-mockup zoom-trigger" data-category="user" data-img="images/apps/rush_baskets_user_screen_1.png" data-caption="Rush Baskets — User Grocery Storefront">
+                      <img src="images/apps/rush_baskets_user_screen_1.png" alt="Rush Baskets Storefront">
+                      <span class="mockup-label">Storefront</span>
+                      <span class="mockup-cat user">Customer</span>
+                    </div>
+                    <!-- 2. Customer Search / Catalog -->
+                    <div class="phone-mockup zoom-trigger" data-category="user" data-img="images/apps/rush_baskets_user_screen_2.png" data-caption="Rush Baskets — Product Catalog &amp; Search">
+                      <img src="images/apps/rush_baskets_user_screen_2.png" alt="Rush Baskets Catalog">
+                      <span class="mockup-label">Catalog</span>
+                      <span class="mockup-cat user">Customer</span>
+                    </div>
+                    <!-- 3. Customer Cart & Checkout -->
+                    <div class="phone-mockup zoom-trigger" data-category="user" data-img="images/apps/rush_baskets_user_screen_3.png" data-caption="Rush Baskets — Cart &amp; Quick Checkout">
+                      <img src="images/apps/rush_baskets_user_screen_3.png" alt="Rush Baskets Checkout">
+                      <span class="mockup-label">Checkout</span>
+                      <span class="mockup-cat user">Customer</span>
+                    </div>
+                    <!-- 4. Customer Live Tracking -->
+                    <div class="phone-mockup zoom-trigger" data-category="user" data-img="images/apps/rush_baskets_user_screen_4.png" data-caption="Rush Baskets — Live Order &amp; Rider Tracking">
+                      <img src="images/apps/rush_baskets_user_screen_4.png" alt="Rush Baskets Tracking">
+                      <span class="mockup-label">Live Track</span>
+                      <span class="mockup-cat user">Customer</span>
+                    </div>
+                    <!-- 5. Driver Dashboard -->
+                    <div class="phone-mockup zoom-trigger" data-category="driver" data-img="images/apps/rush_baskets_driver_screen_1.png" data-caption="Rush Baskets — Delivery Agent Orders Hub">
+                      <img src="images/apps/rush_baskets_driver_screen_1.png" alt="Rush Baskets Driver Hub">
+                      <span class="mockup-label">Agent Hub</span>
+                      <span class="mockup-cat driver">Driver</span>
+                    </div>
+                    <!-- 6. Driver Acceptance -->
+                    <div class="phone-mockup zoom-trigger" data-category="driver" data-img="images/apps/rush_baskets_driver_screen_2.png" data-caption="Rush Baskets — Order Acceptance &amp; SLA Details">
+                      <img src="images/apps/rush_baskets_driver_screen_2.png" alt="Rush Baskets Order Acceptance">
+                      <span class="mockup-label">Dispatch</span>
+                      <span class="mockup-cat driver">Driver</span>
+                    </div>
+                    <!-- 7. Driver Turn-by-Turn GPS -->
+                    <div class="phone-mockup zoom-trigger" data-category="driver" data-img="images/apps/rush_baskets_driver_screen_3.png" data-caption="Rush Baskets — Turn-by-Turn GPS Navigation">
+                      <img src="images/apps/rush_baskets_driver_screen_3.png" alt="Rush Baskets GPS Navigation">
+                      <span class="mockup-label">GPS Route</span>
+                      <span class="mockup-cat driver">Driver</span>
+                    </div>
+                    <!-- 8. Driver Earnings -->
+                    <div class="phone-mockup zoom-trigger" data-category="driver" data-img="images/apps/rush_baskets_driver_screen_4.png" data-caption="Rush Baskets — Agent Earnings &amp; Payouts">
+                      <img src="images/apps/rush_baskets_driver_screen_4.png" alt="Rush Baskets Agent Earnings">
+                      <span class="mockup-label">Earnings</span>
+                      <span class="mockup-cat driver">Driver</span>
+                    </div>
+                  </div>
+
+                  <button type="button" class="slider-nav-btn next" aria-label="Next screenshot">
+                    <i class="ri-arrow-right-s-line"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Goody Tokri -->
+          <article class="project-showcase-card">
+            <div class="project-content-col">
+              <div class="app-identity-row">
+                <img src="images/apps/goody_tokri_user_icon.png" alt="Goody Tokri Icon" class="app-square-icon">
+                <div>
+                  <div class="app-title-wrap">
+                    <h3 class="app-title">Goody Tokri</h3>
+                    <span class="badge-store-tag play"><i class="ri-google-play-fill"></i> Google Play</span>
+                    <span class="badge-store-tag special"><i class="ri-truck-fill"></i> Rider Fleet Sync</span>
+                  </div>
+                  <p class="app-tagline">Hyperlocal Grocery &amp; Delivery Boy Logistics Suite</p>
+                </div>
+              </div>
+
+              <div class="app-metrics-strip">
+                <div class="metric-chip"><i class="ri-shopping-basket-fill"></i> <strong>Hyperlocal</strong> Catalog
+                </div>
+                <div class="metric-chip"><i class="ri-navigation-fill"></i> <strong>Turn-by-Turn</strong> Navigation
+                </div>
+                <div class="metric-chip"><i class="ri-percent-fill"></i> <strong>Coupon</strong> Engine</div>
+              </div>
+
+              <p class="project-summary">
+                Comprehensive grocery ordering and logistics platform. Built user app for catalog exploration, smart
+                cart, discount coupon engine, and secure checkout; architected the Rider partner app featuring real-time
+                delivery order acceptance, Google Maps turn-by-turn navigation, and automated earnings dashboard.
+              </p>
+
+              <ul class="feature-checklist">
+                <li><i class="ri-check-line"></i> Optimized 100+ REST API integrations using Dio interceptors, retry
+                  logic, and response caching.</li>
+                <li><i class="ri-check-line"></i> Dedicated Delivery Partner app with instant order push alerts and
+                  turn-by-turn routing.</li>
+                <li><i class="ri-check-line"></i> Clean, responsive UI with smooth state management using Provider.</li>
+              </ul>
+
+              <div class="tech-chip-list">
+                <span>Flutter</span><span>Dart</span><span>Provider</span><span>Google Maps SDK</span><span>Dio
+                  Caching</span><span>FCM Push</span>
+              </div>
+
+              <div class="app-cta-group">
+                <a href="https://play.google.com/store/apps/details?id=com.bmdu.goodytokriUser" target="_blank"
+                  rel="noopener noreferrer" class="btn-store-action play">
+                  <i class="ri-google-play-fill"></i>
+                  <div>
+                    <span class="cta-top">GET IT ON</span>
+                    <span class="cta-bottom">Play Store (User App)</span>
+                  </div>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.bmdu.grocery_delivery" target="_blank"
+                  rel="noopener noreferrer" class="btn-store-action secondary">
+                  <i class="ri-e-bike-fill"></i>
+                  <div>
+                    <span class="cta-top">RIDER APP</span>
+                    <span class="cta-bottom">Play Store (Delivery Boy)</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-device-col">
+              <div class="showcase-slider-container" data-project="goody-tokri">
+                <div class="slider-control-header">
+                  <div class="slider-counter">
+                    <i class="ri-smartphone-line"></i>
+                    <span>Screens (<strong class="slider-current-num">1</strong> of 8)</span>
+                  </div>
+                  <button type="button" class="btn-view-all-screens" data-gallery-target="goody-tokri">
+                    <i class="ri-grid-fill"></i>
+                    <span>View All (8)</span>
+                  </button>
+                </div>
+
+                <div class="slider-viewport-wrap">
+                  <button type="button" class="slider-nav-btn prev" aria-label="Previous screenshot">
+                    <i class="ri-arrow-left-s-line"></i>
+                  </button>
+
+                  <div class="device-showcase-wrap smooth-slider">
+                    <!-- 1. User Home -->
+                    <div class="phone-mockup zoom-trigger" data-category="user" data-img="images/apps/goody_tokri_user_screen_1.png" data-caption="Goody Tokri — User Storefront &amp; Home Catalog">
+                      <img src="images/apps/goody_tokri_user_screen_1.png" alt="Goody Tokri Catalog">
+                      <span class="mockup-label">Home Store</span>
+                      <span class="mockup-cat user">Customer</span>
+                    </div>
+                    <!-- 2. User Categories -->
+                    <div class="phone-mockup zoom-trigger" data-category="user" data-img="images/apps/goody_tokri_user_screen_2.png" data-caption="Goody Tokri — Category Exploration &amp; Smart Search">
+                      <img src="images/apps/goody_tokri_user_screen_2.png" alt="Goody Tokri Categories">
+                      <span class="mockup-label">Categories</span>
+                      <span class="mockup-cat user">Customer</span>
+                    </div>
+                    <!-- 3. User Cart & Coupon -->
+                    <div class="phone-mockup zoom-trigger" data-category="user" data-img="images/apps/goody_tokri_user_screen_3.png" data-caption="Goody Tokri — Smart Cart &amp; Discount Coupon Engine">
+                      <img src="images/apps/goody_tokri_user_screen_3.png" alt="Goody Tokri Cart">
+                      <span class="mockup-label">Cart &amp; Deals</span>
+                      <span class="mockup-cat user">Customer</span>
+                    </div>
+                    <!-- 4. User Order Summary -->
+                    <div class="phone-mockup zoom-trigger" data-category="user" data-img="images/apps/goody_tokri_user_screen_4.png" data-caption="Goody Tokri — Checkout &amp; Order Confirmation">
+                      <img src="images/apps/goody_tokri_user_screen_4.png" alt="Goody Tokri Checkout">
+                      <span class="mockup-label">Checkout</span>
+                      <span class="mockup-cat user">Customer</span>
+                    </div>
+                    <!-- 5. Rider Delivery Hub -->
+                    <div class="phone-mockup zoom-trigger" data-category="rider" data-img="images/apps/goody_tokri_driver_screen_1.png" data-caption="Goody Tokri — Rider Active Orders Hub">
+                      <img src="images/apps/goody_tokri_driver_screen_1.png" alt="Goody Tokri Delivery Hub">
+                      <span class="mockup-label">Rider Hub</span>
+                      <span class="mockup-cat driver">Rider</span>
+                    </div>
+                    <!-- 6. Rider Route Navigation -->
+                    <div class="phone-mockup zoom-trigger" data-category="rider" data-img="images/apps/goody_tokri_driver_screen_2.png" data-caption="Goody Tokri — Google Maps Turn-by-Turn Routing">
+                      <img src="images/apps/goody_tokri_driver_screen_2.png" alt="Goody Tokri Rider Navigation">
+                      <span class="mockup-label">Navigation</span>
+                      <span class="mockup-cat driver">Rider</span>
+                    </div>
+                    <!-- 7. Rider Dropoff Details -->
+                    <div class="phone-mockup zoom-trigger" data-category="rider" data-img="images/apps/goody_tokri_driver_screen_3.png" data-caption="Goody Tokri — Delivery Confirmation &amp; Customer Connect">
+                      <img src="images/apps/goody_tokri_driver_screen_3.png" alt="Goody Tokri Delivery Details">
+                      <span class="mockup-label">Drop-off</span>
+                      <span class="mockup-cat driver">Rider</span>
+                    </div>
+                    <!-- 8. Rider Earnings -->
+                    <div class="phone-mockup zoom-trigger" data-category="rider" data-img="images/apps/goody_tokri_driver_screen_4.png" data-caption="Goody Tokri — Rider Shift Analytics &amp; Wallet">
+                      <img src="images/apps/goody_tokri_driver_screen_4.png" alt="Goody Tokri Rider Earnings">
+                      <span class="mockup-label">Earnings</span>
+                      <span class="mockup-cat driver">Rider</span>
+                    </div>
+                  </div>
+
+                  <button type="button" class="slider-nav-btn next" aria-label="Next screenshot">
+                    <i class="ri-arrow-right-s-line"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Bid Venchure -->
+          <article class="project-showcase-card">
+            <div class="project-content-col">
+              <div class="app-identity-row">
+                <img src="images/apps/bid_venchure_icon.png" alt="Bid Venchure Icon" class="app-square-icon">
+                <div>
+                  <div class="app-title-wrap">
+                    <h3 class="app-title">Bid Venchure</h3>
+                    <span class="badge-store-tag play"><i class="ri-google-play-fill"></i> Google Play</span>
+                    <span class="badge-store-tag live"><i class="ri-auction-fill"></i> Reverse Bidding</span>
+                  </div>
+                  <p class="app-tagline">Personalized Event Booking &amp; Vendor Bidding Marketplace</p>
+                </div>
+              </div>
+
+              <div class="app-metrics-strip">
+                <div class="metric-chip"><i class="ri-auction-line"></i> <strong>Real-Time</strong> Vendor Bidding</div>
+                <div class="metric-chip"><i class="ri-calendar-check-fill"></i> <strong>Custom</strong> Event Planner
+                </div>
+                <div class="metric-chip"><i class="ri-chat-voice-fill"></i> <strong>Live</strong> Negotiation</div>
+              </div>
+
+              <p class="project-summary">
+                Interactive reverse-auction marketplace for personalized events (birthdays, weddings, corporate
+                functions). Users submit event requirements (guest count, budget, veg/non-veg menu preferences,
+                location) and receive competitive bids in real-time from certified local venues and caterers.
+              </p>
+
+              <ul class="feature-checklist">
+                <li><i class="ri-check-line"></i> Built with BLoC state management ensuring predictable, testable UI
+                  updates.</li>
+                <li><i class="ri-check-line"></i> Real-time bidding pipeline with live price counter-offers via
+                  WebSockets.</li>
+                <li><i class="ri-check-line"></i> Push notification triggers alerting hosts and vendors instantly for
+                  new bids.</li>
+              </ul>
+
+              <div class="tech-chip-list">
+                <span>Flutter</span><span>Dart</span><span>BLoC</span><span>WebSockets</span><span>REST
+                  APIs</span><span>Firebase FCM</span>
+              </div>
+
+              <div class="app-cta-group">
+                <a href="https://play.google.com/store/apps/details?id=com.bidvenchure.bid_venchure_user"
+                  target="_blank" rel="noopener noreferrer" class="btn-store-action play">
+                  <i class="ri-google-play-fill"></i>
+                  <div>
+                    <span class="cta-top">GET IT ON</span>
+                    <span class="cta-bottom">Google Play Store</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-device-col">
+              <div class="showcase-slider-container" data-project="bid-venchure">
+                <div class="slider-control-header">
+                  <div class="slider-counter">
+                    <i class="ri-smartphone-line"></i>
+                    <span>Screens (<strong class="slider-current-num">1</strong> of 4)</span>
+                  </div>
+                  <button type="button" class="btn-view-all-screens" data-gallery-target="bid-venchure">
+                    <i class="ri-grid-fill"></i>
+                    <span>View All (4)</span>
+                  </button>
+                </div>
+
+                <div class="slider-viewport-wrap">
+                  <button type="button" class="slider-nav-btn prev" aria-label="Previous screenshot">
+                    <i class="ri-arrow-left-s-line"></i>
+                  </button>
+
+                  <div class="device-showcase-wrap smooth-slider">
+                    <!-- 1. Event Setup -->
+                    <div class="phone-mockup zoom-trigger" data-img="images/apps/bid_venchure_screen_1.png" data-caption="Bid Venchure — Event Setup &amp; Requirements">
+                      <img src="images/apps/bid_venchure_screen_1.png" alt="Bid Venchure Setup">
+                      <span class="mockup-label">Event Setup</span>
+                    </div>
+                    <!-- 2. Venue & Preferences -->
+                    <div class="phone-mockup zoom-trigger" data-img="images/apps/bid_venchure_screen_2.png" data-caption="Bid Venchure — Venue &amp; Catering Preferences">
+                      <img src="images/apps/bid_venchure_screen_2.png" alt="Bid Venchure Preferences">
+                      <span class="mockup-label">Preferences</span>
+                    </div>
+                    <!-- 3. Live Bidding Feed -->
+                    <div class="phone-mockup zoom-trigger" data-img="images/apps/bid_venchure_screen_3.png" data-caption="Bid Venchure — Live Vendor Bidding Feed">
+                      <img src="images/apps/bid_venchure_screen_3.png" alt="Bid Venchure Bidding">
+                      <span class="mockup-label">Live Bids</span>
+                    </div>
+                    <!-- 4. Contract & Booking -->
+                    <div class="phone-mockup zoom-trigger" data-img="images/apps/bid_venchure_screen_4.png" data-caption="Bid Venchure — Contract &amp; Booking Confirmation">
+                      <img src="images/apps/bid_venchure_screen_4.png" alt="Bid Venchure Booking">
+                      <span class="mockup-label">Confirmation</span>
+                    </div>
+                  </div>
+
+                  <button type="button" class="slider-nav-btn next" aria-label="Next screenshot">
+                    <i class="ri-arrow-right-s-line"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Cpolix EV Charging -->
+          <article class="project-showcase-card">
+            <div class="project-content-col">
+              <div class="app-identity-row">
+                <div class="app-square-icon placeholder-cpolix">
+                  <i class="ri-charging-pile-2-fill"></i>
+                </div>
+                <div>
+                  <div class="app-title-wrap">
+                    <h3 class="app-title">Cpolix — Smart EV Charging</h3>
+                    <span class="badge-store-tag enterprise"><i class="ri-battery-charge-fill"></i> Enterprise EV</span>
+                    <span class="badge-store-tag live"><i class="ri-broadcast-fill"></i> Live Telemetry</span>
+                  </div>
+                  <p class="app-tagline">Station Discovery, OCPP Remote Control &amp; Socket.IO Telemetry</p>
+                </div>
+              </div>
+
+              <div class="app-metrics-strip">
+                <div class="metric-chip"><i class="ri-map-pin-range-fill"></i> <strong>Station</strong> Discovery</div>
+                <div class="metric-chip"><i class="ri-flashlight-fill"></i> <strong>Live kWh</strong> &amp; % Tracking
+                </div>
+                <div class="metric-chip"><i class="ri-secure-payment-fill"></i> <strong>Razorpay</strong> Checkout</div>
+              </div>
+
+              <p class="project-summary">
+                Developing a production-grade EV charging application with maps, geolocation, station discovery,
+                navigation, and real-time charging-session tracking via Socket.IO. Integrated OCPP-backed REST APIs for
+                remote Start/Stop control with real-time energy (kWh), charging %, and session duration monitoring.
+                Built Razorpay payment flow, ticket support, and analytics.
+              </p>
+
+              <div class="tech-chip-list">
+                <span>Flutter</span><span>Dart</span><span>Provider</span><span>Socket.IO</span><span>Google Maps
+                  SDK</span><span>Razorpay</span><span>OCPP REST APIs</span><span>FCM</span>
+              </div>
+
+              <div class="status-indicator-badge">
+                <i class="ri-shield-check-fill"></i> In Active Deployment · Internal Testing Tracks
+              </div>
+            </div>
+
+            <div class="project-device-col">
+              <div class="terminal-widget">
+                <div class="widget-header">
+                  <span><i class="ri-broadcast-line text-cyan"></i> OCPP 1.6 / 2.0.1 Live Stream</span>
+                  <span class="live-dot"></span>
+                </div>
+                <div class="widget-metrics">
+                  <div class="metric-entry">
+                    <span class="entry-lbl">Battery SoC</span>
+                    <span class="entry-val text-cyan">78%</span>
+                  </div>
+                  <div class="metric-entry">
+                    <span class="entry-lbl">Energy Delivered</span>
+                    <span class="entry-val">34.2 kWh</span>
+                  </div>
+                  <div class="metric-entry">
+                    <span class="entry-lbl">Charge Speed</span>
+                    <span class="entry-val">60 kW DC</span>
+                  </div>
+                  <div class="metric-entry">
+                    <span class="entry-lbl">Duration</span>
+                    <span class="entry-val">00:32:15</span>
+                  </div>
+                </div>
+                <div class="widget-footer">
+                  <i class="ri-check-line text-success"></i> Socket.IO Channel Active
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. SureRide Medical Ride-Booking -->
+          <article class="project-showcase-card">
+            <div class="project-content-col">
+              <div class="app-identity-row">
+                <div class="app-square-icon placeholder-sureride">
+                  <i class="ri-hospital-fill"></i>
+                </div>
+                <div>
+                  <div class="app-title-wrap">
+                    <h3 class="app-title">SureRide</h3>
+                    <span class="badge-store-tag medical"><i class="ri-heart-pulse-fill"></i> Medical Emergency</span>
+                    <span class="badge-store-tag apple"><i class="ri-apple-fill"></i> TestFlight iOS</span>
+                  </div>
+                  <p class="app-tagline">Emergency Medical Ride &amp; Ambulance Dispatching System</p>
+                </div>
+              </div>
+
+              <div class="app-metrics-strip">
+                <div class="metric-chip"><i class="ri-alarm-warning-fill"></i> <strong>Ambulance</strong> &amp;
+                  Wheelchair Dispatch</div>
+                <div class="metric-chip"><i class="ri-route-fill"></i> <strong>Dynamic</strong> Google Maps ETA</div>
+                <div class="metric-chip"><i class="ri-pulse-fill"></i> <strong>Socket.IO</strong> Pipeline</div>
+              </div>
+
+              <p class="project-summary">
+                Built a medical emergency ride-booking app for ambulance, car with wheelchair, and stretcher services
+                featuring live driver tracking, dynamic ETA updates using Google Maps SDK, and real-time ride-status
+                pipeline via Socket.IO and FCM.
+              </p>
+
+              <div class="tech-chip-list">
+                <span>Flutter</span><span>Dart</span><span>Provider</span><span>Socket.IO</span><span>FCM</span><span>Google
+                  Maps SDK</span><span>REST APIs</span>
+              </div>
+
+              <div class="status-indicator-badge">
+                <i class="ri-apple-fill"></i> Deployed via Apple TestFlight &amp; Internal Testing Tracks
+              </div>
+            </div>
+
+            <div class="project-device-col">
+              <div class="terminal-widget medical-widget">
+                <div class="widget-header">
+                  <span><i class="ri-roadster-fill text-danger"></i> Emergency Dispatch Pipeline</span>
+                  <span class="live-dot red"></span>
+                </div>
+                <div class="widget-center-callout">
+                  <span class="callout-big">4 Min ETA</span>
+                  <span class="callout-sub">ALS Ambulance En Route with Live GPS Bearing</span>
+                </div>
+                <div class="widget-footer">
+                  <i class="ri-check-line text-success"></i> Telemetry &amp; Siren Status Synced
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="section">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-badge">Academic Foundation</div>
+          <h2 class="section-title">Education &amp; Credentials</h2>
+          <p class="section-lead">Formal degree in Information Technology alongside continuous professional learning.
+          </p>
+        </div>
+
         <div class="education-grid">
-          <div class="education-card reveal">
-            <div class="edu-icon-wrap">
-              <i class="ri-graduation-cap-fill"></i>
-            </div>
-            <div class="edu-info">
-              <h3>B.Tech in Information Technology</h3>
-              <span class="edu-school">Rajkiya Developering College, Azamgarh</span>
-              <span class="edu-year">2020 – 2024</span>
+
+          <div class="education-card">
+            <div class="edu-icon"><i class="ri-graduation-cap-fill"></i></div>
+            <div class="edu-body">
+              <div class="edu-degree">B.Tech in Information Technology</div>
+              <div class="edu-institute"><i class="ri-government-line"></i> Government Engineering College, Azamgarh
+              </div>
+              <div class="edu-timeline"><i class="ri-calendar-line"></i> March 2020 – March 2024</div>
+              <p class="edu-details">
+                Rigorous grounding in Data Structures &amp; Algorithms, Object-Oriented Software Design, Operating
+                Systems, Database Management Systems, and Mobile Architecture.
+              </p>
             </div>
           </div>
-          <div class="cert-card reveal">
-            <div class="edu-icon-wrap cert">
-              <i class="ri-award-fill"></i>
-            </div>
-            <div class="edu-info">
-              <h3>Certifications</h3>
-              <ul class="cert-list">
-                <li><i class="ri-check-line"></i> Advanced Prompt Developering for Large Language Models</li>
-                <li><i class="ri-check-line"></i> Blockchain Fundamentals and Application</li>
+
+          <div class="education-card">
+            <div class="edu-icon cert"><i class="ri-award-fill"></i></div>
+            <div class="edu-body">
+              <div class="edu-degree">Certifications &amp; Accreditations</div>
+              <div class="edu-timeline"><i class="ri-shield-check-line"></i> Verified Professional Programs</div>
+              <ul class="cert-item-list">
+                <li>
+                  <i class="ri-checkbox-circle-fill"></i>
+                  <div>
+                    <strong>Advanced Prompt Engineering for Large Language Models</strong>
+                    <span>Techniques in context conditioning, chain-of-thought, and autonomous agents.</span>
+                  </div>
+                </li>
+                <li>
+                  <i class="ri-checkbox-circle-fill"></i>
+                  <div>
+                    <strong>Blockchain Fundamentals and Applications</strong>
+                    <span>Distributed ledger architecture, smart contracts, and decentralized state machines.</span>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section contact">
-      <div class="contact-glow"></div>
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section bg-alt">
       <div class="section-container">
-        <h2 class="contact-heading reveal">
-          <span>Let's Work</span>
-          <span>Together<span class="accent-dot">.</span></span>
-        </h2>
-        <p class="contact-sub reveal">Have a project in mind? Let's build something amazing.</p>
-        <div class="contact-wrapper reveal">
-          <div class="contact-grid">
-            <a href="mailto:ih8237728@gmail.com" class="contact-card" id="contact-email">
-              <i class="ri-mail-send-line"></i>
-              <span class="contact-card-label">Email</span>
-              <span class="contact-card-value">ih8237728@gmail.com</span>
-            </a>
-            <a href="tel:+919369066500" class="contact-card" id="contact-phone">
-              <i class="ri-phone-line"></i>
-              <span class="contact-card-label">Phone</span>
-              <span class="contact-card-value">+91 9369066500</span>
-            </a>
-            <a href="https://linkedin.com/in/imran-Hashmi" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-linkedin">
-              <i class="ri-linkedin-box-fill"></i>
-              <span class="contact-card-label">LinkedIn</span>
-              <span class="contact-card-value">imran-Hashmi</span>
-            </a>
-            <a href="https://github.com/Imran6500" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-github">
-              <i class="ri-github-fill"></i>
-              <span class="contact-card-label">GitHub</span>
-              <span class="contact-card-value">Imran6500</span>
-            </a>
+        <div class="section-header text-center">
+          <div class="section-badge">Get In Touch</div>
+          <h2 class="section-title">Let's Discuss Your Mobile Application</h2>
+          <p class="section-lead">Open for full-time engineering roles, mobile architecture consultations, and contract
+            development.</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-cards-col">
+
+            <div class="contact-method-card">
+              <div class="method-icon"><i class="ri-mail-send-fill"></i></div>
+              <div class="method-body">
+                <span class="method-label">Direct Email</span>
+                <a href="mailto:imranhashimi6500@gmail.com" class="method-value">imranhashimi6500@gmail.com</a>
+              </div>
+              <button class="copy-action-btn" data-copy="imranhashimi6500@gmail.com" title="Copy Email">
+                <i class="ri-file-copy-line"></i>
+              </button>
+            </div>
+
+            <div class="contact-method-card">
+              <div class="method-icon phone"><i class="ri-phone-fill"></i></div>
+              <div class="method-body">
+                <span class="method-label">Direct Phone / WhatsApp</span>
+                <a href="tel:+919369066500" class="method-value">+91 9369066500</a>
+              </div>
+              <button class="copy-action-btn" data-copy="+919369066500" title="Copy Phone Number">
+                <i class="ri-file-copy-line"></i>
+              </button>
+            </div>
+
+            <div class="contact-method-card">
+              <div class="method-icon location"><i class="ri-map-pin-2-fill"></i></div>
+              <div class="method-body">
+                <span class="method-label">Current Location</span>
+                <span class="method-value">Noida, Uttar Pradesh, India</span>
+              </div>
+            </div>
+
+            <div class="social-links-row">
+              <a href="https://linkedin.com/in/imran-Hashimi" target="_blank" rel="noopener noreferrer"
+                class="social-link-btn">
+                <i class="ri-linkedin-box-fill"></i>
+                <span>LinkedIn</span>
+                <i class="ri-arrow-right-up-line arrow"></i>
+              </a>
+              <a href="https://github.com/Imran6500" target="_blank" rel="noopener noreferrer" class="social-link-btn">
+                <i class="ri-github-fill"></i>
+                <span>GitHub</span>
+                <i class="ri-arrow-right-up-line arrow"></i>
+              </a>
+            </div>
+
           </div>
-          <div class="contact-form-container">
-            <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
-              <div class="form-group">
-                <input type="text" class="form-input" placeholder="Your Name" required>
+
+          <div class="contact-form-col">
+            <form class="clean-form" id="contact-form" action="https://formsubmit.co/imranhashimi6500@gmail.com" method="POST">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_subject" value="New Portfolio Inquiry for Imran Hashmi">
+              <input type="hidden" name="_template" value="table">
+              <div class="form-grid-2">
+                <div class="form-field">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="name" required placeholder="e.g. Alex Morgan">
+                </div>
+                <div class="form-field">
+                  <label for="email">Your Email</label>
+                  <input type="email" id="email" name="email" required placeholder="alex@company.com">
+                </div>
               </div>
-              <div class="form-group">
-                <input type="email" class="form-input" placeholder="Your Email" required>
+              <div class="form-field">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required placeholder="Flutter Role / Project Inquiry">
               </div>
-              <div class="form-group">
-                <textarea class="form-input form-textarea" placeholder="Your Message" rows="4" required></textarea>
+              <div class="form-field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required
+                  placeholder="Describe your mobile app requirements or open position..."></textarea>
               </div>
-              <button type="submit" class="btn btn-primary form-submit">
+              <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
                 <span>Send Message</span>
                 <i class="ri-send-plane-fill"></i>
               </button>
+              <div class="form-status-msg" id="form-status-msg"></div>
             </form>
           </div>
+
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-glow"></div>
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
     <div class="section-container">
-      <div class="footer-top">
-        <h2 class="footer-heading">Ready to scale your app?</h2>
-        <p class="footer-sub">Let's collaborate to build something extraordinary.</p>
-        <a href="#contact" class="btn btn-primary footer-btn">
-          <span>Start a Conversation</span>
-          <i class="ri-arrow-right-line"></i>
-        </a>
-      </div>
-      <div class="footer-divider"></div>
-      <div class="footer-bottom">
-        <div class="footer-brand">
-          <a href="#hero" class="footer-logo">
-            <img src="logo.png" alt="Flutter Dev Logo" class="logo-img">
-          </a>
-          <p class="footer-copy">&copy; 2025 Imran Hashmi.<br>Built with passion.</p>
+      <div class="footer-grid">
+
+        <div class="footer-col brand-col">
+          <div class="footer-logo">
+            <img src="images/avatar.jpg" alt="Imran Hashmi" class="footer-avatar">
+            <span>Imran Hashmi</span>
+          </div>
+          <p class="footer-text">
+            Flutter Developer with 2.5+ years of experience architecting high-performance mobile applications with Clean
+            Architecture, BLoC, and real-time Socket.IO systems.
+          </p>
+          <div class="footer-copy">
+            &copy; 2026 Imran Hashmi. All rights reserved.
+          </div>
         </div>
-        <div class="footer-links">
+
+        <div class="footer-col">
           <h4>Navigation</h4>
-          <a href="#hero">Home</a>
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Live Apps</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
-        <div class="footer-links">
-          <h4>Socials</h4>
-          <a href="https://linkedin.com/in/imran-Hashmi" target="_blank" rel="noopener noreferrer"><i class="ri-linkedin-box-fill" style="margin-right: 6px;"></i>LinkedIn</a>
-          <a href="https://github.com/Imran6500" target="_blank" rel="noopener noreferrer"><i class="ri-github-fill" style="margin-right: 6px;"></i>GitHub</a>
-          <a href="mailto:ih8237728@gmail.com"><i class="ri-mail-line" style="margin-right: 6px;"></i>Email</a>
+
+        <div class="footer-col">
+          <h4>Live Applications</h4>
+          <ul class="footer-links">
+            <li><a href="https://play.google.com/store/apps/details?id=com.rushbaskets.rush_baskets" target="_blank"
+                rel="noopener noreferrer">Rush Baskets (Play Store)</a></li>
+            <li><a href="https://apps.apple.com/in/app/rush-baskets/id6749930237" target="_blank"
+                rel="noopener noreferrer">Rush Baskets (App Store)</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.bmdu.goodytokriUser" target="_blank"
+                rel="noopener noreferrer">Goody Tokri (User App)</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.bidvenchure.bid_venchure_user"
+                target="_blank" rel="noopener noreferrer">Bid Venchure</a></li>
+          </ul>
         </div>
+
+        <div class="footer-col">
+          <h4>Direct Connect</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:imranhashimi6500@gmail.com"><i class="ri-mail-line"></i> Email</a></li>
+            <li><a href="tel:+919369066500"><i class="ri-phone-line"></i> +91 9369066500</a></li>
+            <li><a href="https://linkedin.com/in/imran-Hashmi" target="_blank" rel="noopener noreferrer"><i
+                  class="ri-linkedin-box-fill"></i> LinkedIn</a></li>
+            <li><a href="https://github.com/Imran6500" target="_blank" rel="noopener noreferrer"><i
+                  class="ri-github-fill"></i> GitHub</a></li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <!-- ALL SCREENSHOTS GALLERY MODAL -->
+  <div id="gallery-modal" class="modal-overlay gallery-modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-backdrop" id="gallery-backdrop"></div>
+    <div class="modal-dialog gallery-modal-dialog">
+      <div class="gallery-modal-header">
+        <div class="gallery-modal-title-wrap">
+          <img src="images/apps/rush_baskets_user_icon.png" alt="App Icon" id="gallery-modal-icon" class="gallery-modal-icon">
+          <div>
+            <h3 id="gallery-modal-title" class="gallery-modal-title">Project Screenshots</h3>
+            <p id="gallery-modal-subtitle" class="gallery-modal-subtitle">All Production Screens</p>
+          </div>
+        </div>
+        <div class="gallery-filter-tabs" id="gallery-filter-tabs"></div>
+        <button class="modal-close" id="gallery-close" aria-label="Close gallery modal">
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+      <div class="gallery-modal-body" id="gallery-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="screenshot-modal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-dialog">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">
+        <i class="ri-close-line"></i>
+      </button>
+      <img src="" alt="App Preview" id="modal-image" class="modal-img">
+      <div class="modal-caption" id="modal-caption"></div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="toast"></div>
+
+  <!-- FLOATING ACTION BUTTON (QUICK CONNECT FAB) -->
+  <div class="fab-container" id="fab-container">
+    <div class="fab-menu" id="fab-menu" aria-hidden="true">
+      <a href="https://wa.me/919369066500?text=Hi%20Imran,%20I%20saw%20your%20Flutter%20portfolio" target="_blank" rel="noopener noreferrer" class="fab-item fab-whatsapp" aria-label="Chat on WhatsApp">
+        <i class="ri-whatsapp-line"></i>
+        <span class="fab-tooltip">Chat on WhatsApp</span>
+      </a>
+      <a href="mailto:imranhashimi6500@gmail.com?subject=Flutter%20Developer%20Inquiry" class="fab-item fab-email" aria-label="Email Imran Directly">
+        <i class="ri-mail-send-line"></i>
+        <span class="fab-tooltip">Email Directly</span>
+      </a>
+      <a href="tel:+919369066500" class="fab-item fab-phone" aria-label="Direct Phone Call">
+        <i class="ri-phone-line"></i>
+        <span class="fab-tooltip">+91 9369066500</span>
+      </a>
+    </div>
+    <button class="fab-main-btn" id="fab-main-btn" aria-label="Quick Connect Menu" title="Quick Connect">
+      <i class="ri-chat-1-fill icon-open"></i>
+      <i class="ri-close-line icon-close"></i>
+      <span class="fab-pulse-ring"></span>
+    </button>
+  </div>
+
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="ri-arrow-up-line"></i>
+  </button>
+
+  <script src="js/main.js?v=20261004_v6"></script>
 </body>
+
 </html>
